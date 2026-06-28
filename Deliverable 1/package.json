@@ -1,0 +1,15 @@
+{
+  "name": "stripe-billing-service",
+  "version": "1.0.0",
+  "description": "Stripe subscription billing service with idempotent webhook handling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-idempotency.js",
+    "dev": "STRIPE_SECRET_KEY=sk_test_xxx STRIPE_WEBHOOK_SECRET=whsec_xxx node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.0.0"
+  }
+}
